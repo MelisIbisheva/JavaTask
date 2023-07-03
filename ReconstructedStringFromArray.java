@@ -52,7 +52,14 @@ public class ReconstructedStringFromArray {
             }
 
         }
-        reconstructedString.append(lastString);
+        String lastElementsInList = stringList.get(stringList.size()-1);
+        if(lastElementsInList.charAt(lastElementsInList.length()-1)!=lastString.charAt(0)){
+            reconstructedString.append(lastString);
+        }else {
+            String stringForAdd=lastString.substring(1);
+            reconstructedString.append(stringForAdd);
+        }
+
         return reconstructedString.toString();
     }
 }
