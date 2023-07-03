@@ -5,6 +5,8 @@ import java.util.Scanner;
 public class ReconstructedStringFromArray {
     public static void main(String[] args) {
         Scanner scanner=new Scanner(System.in);
+        // примерен вход:
+        //###Z, 6$$W, A456, W#$$$, e5555
         String[] array= scanner.nextLine().split(", ");
         String result = reconstructedMethod(array);
         System.out.println(result);
@@ -34,6 +36,7 @@ public class ReconstructedStringFromArray {
             reconstructedString.append(firsElementInList);
         }else {
             String stringForAdd=firsElementInList.substring(1);
+            reconstructedString.append(stringForAdd);
         }
         for (int i = 0; i < stringList.size()-1; i++) {
             String currentString = stringList.get(i);
