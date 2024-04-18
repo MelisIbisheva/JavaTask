@@ -19,7 +19,7 @@ public class Client {
         totalPrice = totalPrice - (totalPrice * getBasicDiscount());
         return totalPrice;
     }
-    double discountAbove(double totalPrice){
+    public double discountAbove(double totalPrice){
         if(totalPrice > 30000){
             totalPrice = totalPrice - (totalPrice * getVolumeDiscountAbove30000());
         } else if (totalPrice > 10000) {
